@@ -1,0 +1,28 @@
+{
+  "type": "Chrome",
+  "capabilities": [
+    {
+      "//": "version and platform are provided from maven/java system properties"
+    }
+  ],
+  "//a": "osCapabilities is set based on desired capability platform",
+  "//b": "the capability must match the platform value to read specific caps",
+  "osCapabilities": [
+    {
+      "win7"   : [{}],
+      "win81"  : [{}],
+      "win10"  : [{}],
+      "OSX"    : [{}],
+      "windows": [{}],
+      "Ubuntu" : [{}]
+    }
+  ],
+  "//": "docker images can be retrieved from docker hub, pick the right build for older browser/driver combo's",
+  "docker image": "",
+  "comments": {
+    "//a": "vm's(not docker) have to be spun up well before starting tests, IE8-11 and Edge is available from",
+    "//b": "https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/",
+    "//c": "they are free and expire in 90 days from first use",
+    "//d": "selenium HQ have made all Chrome and Firefox (ubuntu) set up for each browser/driver"
+  }
+}
